@@ -1,0 +1,12 @@
+# Audit run outputs (generated per-session, contain user-specific data)
+audits/
+DynAuditClaw/
+CLAUDE.md
+TODO.md
+create_demo_pptx.py
+demo.pptx
+skills-lock.json
+.agents/
+.claude/
+skills/
+tests/
