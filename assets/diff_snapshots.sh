@@ -37,7 +37,9 @@ else
     PATTERNS="CANARY_AUDIT"
 fi
 
-grep -r -l -E "$PATTERNS" /results/ /tmp/ 2>/dev/null | while read f; do
+grep -r -l -E "$PATTERNS" /results/ /tmp/ 2>/dev/null \
+    | grep -v -E '/tmp/(jiti|v8-compile-cache|node-compile-cache|\.npm|\.cache)/' \
+    | while read f; do
     echo "ALERT: Canary token found in: $f" >> "$REPORT"
 done
 

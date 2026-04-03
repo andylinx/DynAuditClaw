@@ -109,7 +109,7 @@ Or, just tell Claude Code:
 DynAuditClaw runs the full pipeline automatically and saves all artifacts to:
 
 ```
-./DynAuditClaw/<timestamp>/
+./audit_results/<timestamp>/
 ```
 
 ---
@@ -166,7 +166,7 @@ Plus **13 composition chains** (C-1 through C-13) that chain multiple attack pri
 ## Audit Output
 
 ```
-./DynAuditClaw/<time-stamp>/
+./audit_results/<time-stamp>/
 ├── tasks/                  # Attack scenario YAMLs (AP × AT × AS)
 │   ├── direct_prompt/
 │   ├── ipi/
