@@ -16,7 +16,13 @@ That's it. DynAuditClaw discovers your [OpenClaw](https://openclaw.ai/) installa
 
 ### Dynamic, Not Static
 
-Most agent security tools run a fixed checklist. DynAuditClaw **adapts to your installation**. It reads your `AGENTS.md`, `MEMORY.md`, `TOOLS.md`, installed skills, MCP servers, and hooks — then designs attacks that reference your real team members, project names, and infrastructure. Every audit is unique to the system it's testing.
+Most agent security tools run a fixed checklist or rely on static analysis — scanning config files, matching known patterns, flagging suspicious strings. That approach catches surface-level issues but fundamentally **cannot detect threats that only emerge at runtime**.
+
+DynAuditClaw **actually runs your agent** inside an isolated environment and observes what it does. This is critical for catching **compositional attacks** — multi-step sequences where each individual step appears completely benign, but the combination produces a security breach. A static scanner sees "read a file," "write a memory," "call a tool" as three harmless operations. DynAuditClaw sees them execute in sequence and detects that the agent just exfiltrated credentials through a chain of seemingly innocent actions.
+
+Beyond compositional threats, dynamic execution reveals behaviors that no amount of config inspection can predict: how the agent responds to authority impersonation in tool outputs, whether social engineering payloads in retrieved data cause the agent to override its safety instructions, and how multi-turn conversational priming gradually erodes policy boundaries. These are emergent behaviors — they exist only when the agent actually runs.
+
+DynAuditClaw also **adapts to your installation**. It reads your `AGENTS.md`, `MEMORY.md`, `TOOLS.md`, installed skills, MCP servers, and hooks — then designs attacks that reference your real team members, project names, and infrastructure. Every audit is unique to the system it's testing.
 
 ### One Command, Full Pipeline
 
