@@ -85,7 +85,7 @@ cp -r . ~/.claude/skills/DynAuditClaw
 Or, just tell Claude Code:
 
 ```
-> Install the DynAuditClaw skill from /path/to/skill_openclaw
+> Install the DynAuditClaw skill from /path/to/DynAuditClaw
 ```
 
 ### Prerequisites
@@ -159,22 +159,7 @@ A test is recorded as `AP-X → AT-Y + AS-Z` (e.g., `AP-2.1 → AT-1.1 + AS-2.1,
 | **AS-6** | Normalization & Decision Steering | Action item normalization, recommendation poisoning, task vector discrepancy |
 | **AS-7** | Multi-Turn Orchestration | Crescendo, conversational priming, policy erosion |
 
-Plus **13 composition chains** (C-1 through C-13) that chain multiple attack primitives into multi-step kill chains where the attack emerges from the combination — each individual step appears benign. Full taxonomy with academic sources in [`references/attack_primitives.md`](references/attack_primitives.md).
-
-<details>
-<summary><strong>Key academic & industry sources</strong></summary>
-
-| AS | Primary Sources |
-|----|----------------|
-| AS-1 | [Palo Alto Unit 42 — Web-Based IPI in the Wild](https://unit42.paloaltonetworks.com/ai-agent-prompt-injection/) (22 payload techniques); [Elastic Security Labs — MCP Attack Vectors](https://www.elastic.co/security-labs/mcp-tools-attack-defense-recommendations) |
-| AS-2 | [OWASP Agentic AI Top 10 — ASI09](https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/); [Acuvity — Semantic Privilege Escalation](https://acuvity.ai/semantic-privilege-escalation-the-agent-security-threat-hiding-in-plain-sight/) |
-| AS-3 | [Christian Schneider — Memory Poisoning](https://christian-schneider.net/blog/persistent-memory-poisoning-in-ai-agents/); [Unit 42 — AI Remembers Too Much](https://unit42.paloaltonetworks.com/indirect-prompt-injection-poisons-ai-longterm-memory/); [Invariant Labs — MCP Tool Poisoning](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks) |
-| AS-4 | [CrowdStrike — Agentic Tool Chain Attacks](https://www.crowdstrike.com/en-us/blog/how-agentic-tool-chain-attacks-threaten-ai-agent-security/); [Elastic Security Labs — MCP Attacks](https://www.elastic.co/security-labs/mcp-tools-attack-defense-recommendations) |
-| AS-5 | [Acuvity — Semantic Privilege Escalation](https://acuvity.ai/semantic-privilege-escalation-the-agent-security-threat-hiding-in-plain-sight/); [Mitiga — Silent Codebase Exfiltration](https://www.mitiga.io/blog/ai-agent-supply-chain-risk-silent-codebase-exfiltration-via-skills); [Unit 42 — Agentic AI Threats](https://unit42.paloaltonetworks.com/agentic-ai-threats/) |
-| AS-6 | [Microsoft — AI Recommendation Poisoning](https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/); [Trend Micro — Malicious OpenClaw Skills](https://www.trendmicro.com/en_us/research/26/b/openclaw-skills-used-to-distribute-atomic-macos-stealer.html); [ISC-Bench](https://github.com/wuyoscar/ISC-Bench) (Wu et al., arXiv 2603.23509) |
-| AS-7 | [Microsoft Research — Crescendo Attack](https://arxiv.org/abs/2404.01833) (USENIX Security 2025); [Unit 42 — Bad Likert Judge](https://unit42.paloaltonetworks.com/multi-turn-technique-jailbreaks-llms/); [CSA — Multi-Turn Attack Framework](https://cloudsecurityalliance.org/blog/2024/09/30/how-multi-turn-attacks-generate-harmful-content-from-your-ai-solution) |
-
-</details>
+Plus **13 composition chains** (C-1 through C-13) that chain multiple attack primitives into multi-step kill chains where the attack emerges from the combination — each individual step appears benign. Full taxonomy with sources in [`references/attack_primitives.md`](references/attack_primitives.md).
 
 ---
 
